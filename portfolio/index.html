@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
-<title>Applications Vimiac</title>
+<title>Produits Vimiac</title>
+<meta name="description" content="Les produits Vimiac : l'éditeur Markdown Calame et le comparateur de caissons. Suivi public, sans collecte de données.">
 <style>:root{--bg:#faf9f7;--fg:#1c1b19;--muted:#6b6862;--rule:#e6e3dd;--accent:#3a5566;--chipbg:#eceae4;--chipfg:#5a5751}
 @media (prefers-color-scheme:dark){:root{--bg:#181715;--fg:#e9e6e0;--muted:#9a968d;--rule:#2e2c28;--accent:#8fb2c6;--chipbg:#26241f;--chipfg:#b7b3a9}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
@@ -18,13 +19,8 @@ header.site nav a:hover{color:var(--fg)}
 main{padding:40px 0 8px}
 h1{font-size:30px;line-height:1.2;margin:0 0 22px;letter-spacing:-.3px}
 h2{font-size:20px;margin:34px 0 12px}
-p{margin:0 0 18px}p.tagline{font-size:19px}strong{font-weight:650}
-ul{padding-left:20px;margin:0 0 18px}li{margin:0 0 10px}
+p{margin:0 0 18px}strong{font-weight:650}
 a{color:var(--accent)}
-.pledges{list-style:none;padding:0;margin:24px 0}
-.pledges li{margin:0 0 16px;padding-left:0}
-.pledges b{display:block;font-size:16px}
-.pledges span{color:var(--muted);font-size:15px}
 .app{border:1px solid var(--rule);border-radius:12px;padding:20px 22px;margin:0 0 20px}
 .app h2{margin:0 0 4px;font-size:20px}
 .chip{display:inline-block;font-size:12px;font-weight:650;letter-spacing:.3px;text-transform:uppercase;background:var(--chipbg);color:var(--chipfg);border-radius:999px;padding:3px 10px;margin-left:8px;vertical-align:middle}
@@ -32,8 +28,6 @@ a{color:var(--accent)}
 .links a{display:inline-block;font-size:14px;font-weight:600;text-decoration:none;color:var(--accent);border:1px solid var(--rule);border-radius:8px;padding:7px 13px;margin:0 8px 8px 0}
 .links a:hover{border-color:var(--accent)}
 .note{color:var(--muted);font-size:14px;font-style:italic}
-.pagelinks{margin-top:30px;padding-top:22px;border-top:1px solid var(--rule);font-size:15px}
-.pagelinks a{margin-right:18px}
 footer.site{margin-top:48px;padding:22px 0 40px;border-top:1px solid var(--rule);color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 18px}
 footer.site a{color:var(--muted);text-decoration:none}footer.site a:hover{color:var(--fg)}</style>
 </head>
@@ -41,21 +35,33 @@ footer.site a{color:var(--muted);text-decoration:none}footer.site a:hover{color:
 <div class="wrap">
 <header class="site">
   <a class="brand" href="/">Vimiac</a>
-  <nav><a href="/portfolio/">Applications</a><a href="/support/">Support</a><a href="/confidentialite/">Confidentialité</a></nav>
+  <nav><a href="/portfolio/">Produits</a><a href="/support/">Support</a><a href="/confidentialite/">Confidentialité</a></nav>
 </header>
 <main>
-<h1>Applications</h1>
-<p>Les applications Vimiac, disponibles ou en cours de développement. Pour chacune, le suivi est public : consultez le backlog et proposez vos idées.</p>
+<h1>Produits</h1>
+<p>Les applications et outils Vimiac, disponibles ou en préparation. Pour chacun, le suivi est public : consultez le backlog et proposez vos idées.</p>
+
 <div class="app">
-  <h2>Calame <span class="chip">En développement</span></h2>
-  <p>Un éditeur Markdown qui affiche la mise en forme pendant que vous écrivez.</p>
+  <h2>Calame <span class="chip">Bientôt sur le Mac App Store</span></h2>
+  <p>Un éditeur Markdown pour Mac qui affiche la mise en forme pendant que vous écrivez.</p>
   <div class="links">
     <a href="/calame/">En savoir plus</a>
     <a href="https://github.com/vimiac/app-calame/issues">Voir le backlog</a>
     <a href="https://github.com/vimiac/app-calame/issues/new/choose">Proposer une suggestion</a>
   </div>
 </div>
-<p class="note">« Proposer une suggestion » ouvre le même canal que le bouton de retour intégré à l’application : les suggestions et les bugs arrivent dans les tickets publics de l’app, un seul endroit.</p>
+
+<div class="app">
+  <h2>Comparateur de caissons <span class="chip">En ligne</span></h2>
+  <p>Un filtre de faisabilité : trouvez un meuble de rangement qui tient dans vos contraintes de largeur, profondeur et hauteur, à travers plusieurs enseignes.</p>
+  <div class="links">
+    <a href="/caissons/">En savoir plus</a>
+    <a href="https://site-caissons.vercel.app">Ouvrir le comparateur</a>
+    <a href="https://github.com/vimiac/site-caissons/issues">Voir le suivi</a>
+  </div>
+</div>
+
+<p class="note">« Proposer une suggestion » ouvre le même canal que le bouton de retour intégré aux produits : les suggestions et les bugs arrivent dans les tickets publics, un seul endroit.</p>
 </main>
 <footer class="site">
   <span>Vimiac — édité en France</span>

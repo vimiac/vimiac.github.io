@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
 <title>Calame — éditeur Markdown à rendu en place, pour Mac</title>
+<meta name="description" content="Calame, un éditeur Markdown pour Mac qui affiche la mise en forme pendant que vous écrivez. Gratuit, sans compte, sans collecte de données.">
 <style>:root{--bg:#faf9f7;--fg:#1c1b19;--muted:#6b6862;--rule:#e6e3dd;--accent:#3a5566;--chipbg:#eceae4;--chipfg:#5a5751}
 @media (prefers-color-scheme:dark){:root{--bg:#181715;--fg:#e9e6e0;--muted:#9a968d;--rule:#2e2c28;--accent:#8fb2c6;--chipbg:#26241f;--chipfg:#b7b3a9}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
@@ -16,19 +17,23 @@ header.site nav{margin-left:auto;font-size:14px}
 header.site nav a{color:var(--muted);text-decoration:none;margin-left:16px}
 header.site nav a:hover{color:var(--fg)}
 main{padding:40px 0 8px}
-h1{font-size:30px;line-height:1.2;margin:0 0 22px;letter-spacing:-.3px}
+h1{font-size:30px;line-height:1.2;margin:0 0 10px;letter-spacing:-.3px}
 h2{font-size:20px;margin:34px 0 12px}
 p{margin:0 0 18px}p.tagline{font-size:19px}strong{font-weight:650}
 ul{padding-left:20px;margin:0 0 18px}li{margin:0 0 10px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:var(--chipbg);padding:1px 5px;border-radius:5px}
 a{color:var(--accent)}
-.pledges{list-style:none;padding:0;margin:24px 0}
-.pledges li{margin:0 0 16px;padding-left:0}
-.pledges b{display:block;font-size:16px}
-.pledges span{color:var(--muted);font-size:15px}
-.app{border:1px solid var(--rule);border-radius:12px;padding:20px 22px;margin:0 0 20px}
-.app h2{margin:0 0 4px;font-size:20px}
-.chip{display:inline-block;font-size:12px;font-weight:650;letter-spacing:.3px;text-transform:uppercase;background:var(--chipbg);color:var(--chipfg);border-radius:999px;padding:3px 10px;margin-left:8px;vertical-align:middle}
-.app p{margin:8px 0 16px;color:var(--fg)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:0 0 22px}
+.status{display:inline-block;font-size:12px;font-weight:650;letter-spacing:.3px;text-transform:uppercase;border-radius:999px;padding:3px 11px;background:var(--chipbg);color:var(--accent);border:1px solid var(--rule)}
+.meta .plat{color:var(--muted);font-size:14px}
+.roadmap{list-style:none;padding:0;margin:18px 0}
+.roadmap li{margin:0 0 15px}
+.roadmap b{font-weight:650}
+.roadmap span{color:var(--muted);font-size:15px;display:block;margin-top:2px}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;border-radius:6px;padding:2px 7px;margin-right:9px;vertical-align:2px}
+.tag.fait{background:#e2ede4;color:#2f6a43}.tag.encours{background:#efe9dc;color:#6b5d2f}.tag.prevu{background:#eae7f0;color:#4a4570}
+@media (prefers-color-scheme:dark){.tag.fait{background:#1e2b22;color:#8fc7a3}.tag.encours{background:#2b2820;color:#c8b877}.tag.prevu{background:#221f2b;color:#b0a8d8}}
+.notdo{list-style:none;padding:0}.notdo li{padding-left:22px;position:relative}.notdo li::before{content:"—";position:absolute;left:0;color:var(--muted)}
 .links a{display:inline-block;font-size:14px;font-weight:600;text-decoration:none;color:var(--accent);border:1px solid var(--rule);border-radius:8px;padding:7px 13px;margin:0 8px 8px 0}
 .links a:hover{border-color:var(--accent)}
 .note{color:var(--muted);font-size:14px;font-style:italic}
@@ -44,20 +49,69 @@ footer.site a{color:var(--muted);text-decoration:none}footer.site a:hover{color:
   <nav><a href="/portfolio/">Applications</a><a href="/support/">Support</a><a href="/confidentialite/">Confidentialité</a></nav>
 </header>
 <main>
+
+<!-- 1. En-tête -->
 <h1>Calame</h1>
 <p class="tagline"><strong>Un éditeur Markdown qui vous montre la mise en forme pendant que vous écrivez.</strong></p>
-<p>Vous tapez <code>#&nbsp;Titre</code>, et la ligne devient un titre — le <code>#</code> s’efface. Vous encadrez un mot de <code>**</code>, il passe en gras — les astérisques disparaissent. Placez le curseur dessus, la syntaxe réapparaît, prête à être modifiée. Vos fichiers restent de simples fichiers <code>.md</code>, lisibles partout.</p>
+
+<!-- 2. État & disponibilité (honnête) -->
+<p class="meta">
+  <span class="status">Bientôt sur le Mac App Store</span>
+  <span class="plat">Application Mac · gratuite</span>
+</p>
+<p>Calame n’est pas encore publié : l’application est prête et en attente de mise en ligne sur le Mac App Store. En attendant, vous pouvez suivre son avancement et proposer vos idées ci-dessous.</p>
+
+<!-- 3. À quoi ça sert & pour qui -->
+<h2>À quoi ça sert</h2>
+<p>Écrire et relire du Markdown sans que la syntaxe gêne la lecture. Vous tapez <code>#&nbsp;Titre</code>, et la ligne devient un titre — le <code>#</code> s’efface. Vous encadrez un mot de <code>**</code>, il passe en gras — les astérisques disparaissent. Placez le curseur dessus, la syntaxe réapparaît, prête à être modifiée. C’est pour celles et ceux qui <strong>prennent des notes ou rédigent en Markdown</strong> et veulent voir le résultat directement dans leur texte, sans fenêtre d’aperçu séparée.</p>
+
+<!-- 4. Ce qu'on peut faire -->
+<h2>Ce que vous pouvez faire</h2>
 <ul>
-<li><strong>Le rendu, sous vos doigts.</strong> Titres, gras, italique, listes, citations, code : mis en forme en place, sans fenêtre d’aperçu séparée.</li>
-<li><strong>Copier propre.</strong> Copiez votre texte mis en forme et collez-le directement dans un e-mail ou un traitement de texte, sans perdre la mise en forme.</li>
-<li><strong>100&nbsp;% local, gratuit.</strong> Aucun compte, aucun serveur, aucune donnée collectée. Gratuit sur le Mac App Store.</li>
+<li><strong>Voir le rendu sous vos doigts.</strong> Titres, gras, italique, listes, citations, code : mis en forme en place, pendant que vous écrivez.</li>
+<li><strong>Garder de vrais fichiers.</strong> Vos documents restent de simples fichiers <code>.md</code>, lisibles partout, qui vous appartiennent.</li>
+<li><strong>Copier propre.</strong> Copiez votre texte mis en forme et collez-le dans un e-mail ou un traitement de texte sans perdre la mise en forme.</li>
+<li><strong>Ne jamais perdre votre travail.</strong> Le document se sauvegarde tout seul, sans vous interrompre.</li>
 </ul>
-<p class="note">Calame ouvre et enregistre de vrais fichiers Markdown : ce que vous écrivez vous appartient et reste sur votre Mac.</p>
-<div class="links" style="margin-top:22px">
+
+<!-- 5. Prise en main -->
+<h2>Prendre en main</h2>
+<p>Ouvrez un fichier <code>.md</code> — ou créez-en un — et écrivez. La mise en forme s’affiche au fil de la frappe ; rien à configurer.</p>
+
+<!-- 6. Ce qu'il NE fait PAS -->
+<h2>Ce que Calame ne fait pas</h2>
+<ul class="notdo">
+<li>Ce n’est pas un traitement de texte : Calame reste au plus près du texte Markdown.</li>
+<li>Pas de collaboration à plusieurs sur un même document.</li>
+<li>Certaines constructions Markdown avancées ne sont pas encore affichées (voir les orientations plus bas).</li>
+</ul>
+
+<!-- 7. Confidentialité -->
+<h2>Le respect de vous</h2>
+<p>Calame fonctionne <strong>sans compte</strong> et <strong>ne collecte rien</strong> : ce que vous écrivez reste sur votre Mac. Même le bouton d’avis intégré ne transmet jamais le contenu, le nom ni le chemin de vos documents. → <a href="/confidentialite/">Notre politique de confidentialité</a>.</p>
+
+<!-- 8. Orientations futures -->
+<h2>Orientations futures</h2>
+<p>Là où va Calame, par thématiques d’usage. Pas de dates : chaque thème avance à son rythme, publiquement.</p>
+<ul class="roadmap">
+<li><span class="tag fait">Fait</span><b>Ne plus jamais perdre son travail</b><span>Le document se sauve tout seul, sans boîte de dialogue, quoi qu’il arrive à la fermeture — même un brouillon jamais enregistré.</span></li>
+<li><span class="tag prevu">Prévu</span><b>Voir ses liens dans le texte</b><span>Les liens s’affichent proprement, comme le reste de la mise en forme.</span></li>
+<li><span class="tag prevu">Prévu</span><b>Mettre en forme sans connaître la syntaxe</b><span>Des raccourcis et un menu pour appliquer gras, italique et le reste à la sélection.</span></li>
+<li><span class="tag prevu">Prévu</span><b>Un rendu Markdown plus riche</b><span>Blocs de code, tableaux, listes de tâches, texte barré : un affichage plus complet et plus fiable.</span></li>
+<li><span class="tag prevu">Prévu</span><b>Chercher et remplacer dans son document</b><span>Un panneau de recherche, qui ne modifie jamais en silence une partie de texte hors de votre vue.</span></li>
+<li><span class="tag prevu">Prévu</span><b>Travailler dans un dossier de fichiers</b><span>Ouvrir un dossier, naviguer dans son arborescence, retrouver son travail au lancement suivant, garder plusieurs documents ouverts.</span></li>
+<li><span class="tag prevu">Prévu</span><b>Donner son avis depuis l’application</b><span>Un bouton pour signaler un problème ou une idée, prérempli des seules informations techniques utiles — jamais du contenu de vos documents.</span></li>
+</ul>
+
+<!-- 9. Donner son avis -->
+<h2>Donner votre avis</h2>
+<p>Le suivi de Calame est public : vous voyez ce qui est prévu et vous proposez vos idées. Le dépôt de suivi est ouvert (un compte GitHub est nécessaire pour écrire).</p>
+<div class="links">
   <a href="https://github.com/vimiac/app-calame/issues">Voir le backlog</a>
   <a href="https://github.com/vimiac/app-calame/issues/new/choose">Proposer une suggestion</a>
 </div>
-<p class="pagelinks"><a href="/support/">Support</a><a href="/confidentialite/">Confidentialité</a></p>
+
+<p class="pagelinks"><a href="/portfolio/">← Toutes les applications</a><a href="/support/">Support</a><a href="/confidentialite/">Confidentialité</a></p>
 </main>
 <footer class="site">
   <span>Vimiac — édité en France</span>

@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="index,follow">
 <title>Support — Vimiac</title>
-<style>:root{--bg:#faf9f7;--fg:#1c1b19;--muted:#6b6862;--rule:#e6e3dd;--accent:#3a5566}
-@media (prefers-color-scheme:dark){:root{--bg:#181715;--fg:#e9e6e0;--muted:#9a968d;--rule:#2e2c28;--accent:#8fb2c6}}
+<meta name="description" content="Une question, un problème ou une suggestion sur un produit Vimiac ? Le suivi est public : signalez et proposez sur l'espace de chaque produit.">
+<style>:root{--bg:#faf9f7;--fg:#1c1b19;--muted:#6b6862;--rule:#e6e3dd;--accent:#3a5566;--chipbg:#eceae4;--chipfg:#5a5751}
+@media (prefers-color-scheme:dark){:root{--bg:#181715;--fg:#e9e6e0;--muted:#9a968d;--rule:#2e2c28;--accent:#8fb2c6;--chipbg:#26241f;--chipfg:#b7b3a9}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;padding:0 20px}
 .wrap{max-width:660px;margin:0 auto}
@@ -16,12 +17,13 @@ header.site nav{margin-left:auto;font-size:14px}
 header.site nav a{color:var(--muted);text-decoration:none;margin-left:16px}
 header.site nav a:hover{color:var(--fg)}
 main{padding:40px 0 8px}
-h1{font-size:30px;line-height:1.2;margin:0 0 22px;letter-spacing:-.3px}
-p{margin:0 0 18px}p.tagline{font-size:19px}strong{font-weight:650}
+h1{font-size:30px;line-height:1.2;margin:0 0 14px;letter-spacing:-.3px}
+h2{font-size:19px;margin:30px 0 10px}
+p{margin:0 0 18px}strong{font-weight:650}
 ul{padding-left:20px;margin:0 0 18px}li{margin:0 0 10px}
 a{color:var(--accent)}
-.effdate{color:var(--muted);font-size:14px;font-style:italic;margin-bottom:26px}
-.appmail{display:inline-block;font-size:18px;font-weight:650;margin:6px 0 20px}
+.links a{display:inline-block;font-size:14px;font-weight:600;text-decoration:none;color:var(--accent);border:1px solid var(--rule);border-radius:8px;padding:7px 13px;margin:0 8px 8px 0}
+.links a:hover{border-color:var(--accent)}
 .note{color:var(--muted);font-size:14px;font-style:italic}
 .pagelinks{margin-top:30px;padding-top:22px;border-top:1px solid var(--rule);font-size:15px}
 .pagelinks a{margin-right:18px}
@@ -32,19 +34,26 @@ footer.site a{color:var(--muted);text-decoration:none}footer.site a:hover{color:
 <div class="wrap">
 <header class="site">
   <a class="brand" href="/">Vimiac</a>
-  <nav><a href="/calame/">Calame</a><a href="/support/">Support</a><a href="/confidentialite/">Confidentialité</a></nav>
+  <nav><a href="/portfolio/">Produits</a><a href="/support/">Support</a><a href="/confidentialite/">Confidentialité</a></nav>
 </header>
 <main>
 <h1>Support</h1>
-<p>Une question, un problème, une suggestion sur une application Vimiac&nbsp;?</p>
-<p class="appmail">Ça se passe sur GitHub : <a href="https://github.com/vimiac/app-calame/issues/new/choose">ouvrir un ticket (bug ou suggestion)</a></p>
-<p>Nous lisons chaque ticket. Pour un bug, indiquez si possible&nbsp;:</p>
+<p>Une question, un problème, une suggestion sur un produit Vimiac ? Le suivi de chaque produit est <strong>public</strong> : c’est là que les demandes sont lues et traitées, au grand jour.</p>
+
+<h2>Par e-mail</h2>
+<p>Écrivez-nous à <a href="mailto:support@vimiac.fr">support@vimiac.fr</a> — nous lisons chaque message.</p>
+
+<h2>Sur l’espace de suivi public</h2>
+<p>Vous pouvez aussi signaler un problème ou proposer une idée directement dans le suivi du produit :</p>
 <ul>
-<li>l’application et sa version (menu <strong>App › À propos</strong>),</li>
-<li>votre version de macOS ou d’iOS,</li>
-<li>ce que vous attendiez et ce qui s’est passé.</li>
+<li><strong>Calame</strong> — <a href="https://github.com/vimiac/app-calame/issues">espace de suivi</a> · <a href="https://github.com/vimiac/app-calame/issues/new/choose">nouvelle demande</a></li>
+<li><strong>Comparateur de caissons</strong> — <a href="https://github.com/vimiac/site-caissons/issues">espace de suivi</a> · <a href="https://github.com/vimiac/site-caissons/issues/new">nouvelle demande</a></li>
 </ul>
-<p class="note">Le suivi (bugs, suggestions, avancement) est public sur GitHub. Ouvrir un ticket nécessite un compte GitHub (gratuit).</p>
+<p>Pour un bug, indiquez si possible : le produit et sa version, votre version de macOS (menu <strong>Calame › À propos</strong> pour l’application), et ce que vous attendiez face à ce qui s’est passé.</p>
+
+<p class="note">L’espace de suivi est le même canal que le bouton de retour intégré aux produits : les suggestions et les bugs arrivent au même endroit, au grand jour. Y écrire nécessite un compte GitHub (gratuit) ; l’e-mail, non.</p>
+
+<p class="pagelinks"><a href="/">Accueil</a><a href="/portfolio/">Produits</a><a href="/confidentialite/">Confidentialité</a></p>
 </main>
 <footer class="site">
   <span>Vimiac — édité en France</span>
